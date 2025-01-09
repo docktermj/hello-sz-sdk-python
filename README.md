@@ -35,6 +35,13 @@
     docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
     ```
 
+## Modes
+
+1. **core:** Uses one instance of `senzing_core`.
+1. **grpc:** Uses one instance of `senzing_grpc`.
+1. **duo:** Uses one instance of either `senzing_core` or `senzing_grpc`.
+1. **both:** Uses two instances comprised of both `senzing_core` and `senzing_grpc`.
+
 ## Styles
 
 ### Style 1
@@ -46,6 +53,7 @@
 | senzing_grpc | `SzAbstractFactory` |    |
 
 1. This style falls apart when a `from senzing import SzAbstractFactory` is in the code.
+1. Can't use this style in "both" mode.
 
 ### Style 2
 
@@ -70,3 +78,5 @@
 | senzing      | `SzAbstractFactory`     |                      |
 | senzing_core | `SzAbstractFactoryCore` | `SzAbstractFactory`  |
 | senzing_grpc | `SzAbstractFactoryGrpc` | `SzAbstractFactory`  |
+
+1. Can't use this style in "both" mode.
