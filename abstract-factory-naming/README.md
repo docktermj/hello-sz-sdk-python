@@ -52,6 +52,7 @@
 | senzing_core | `SzAbstractFactory` |    |
 | senzing_grpc | `SzAbstractFactory` |    |
 
+1. Currently testable.
 1. This style falls apart when a `from senzing import SzAbstractFactory` is in the code.
 1. Can't use this style in "both" mode.
 1. In "duo" mode, drives `pylance` crazy.
@@ -64,6 +65,8 @@
 | senzing_core | `SzAbstractFactory` | `SzAbstractFactoryCore`  |
 | senzing_grpc | `SzAbstractFactory` | `SzAbstractFactoryGrpc`  |
 
+1. Currently testable.
+
 ### Style 3
 
 | package      | Variable                | AS |
@@ -71,6 +74,8 @@
 | senzing      | `SzAbstractFactory`     |    |
 | senzing_core | `SzAbstractFactoryCore` |    |
 | senzing_grpc | `SzAbstractFactoryGrpc` |    |
+
+1. Currently not testable.
 
 ### Style 4
 
@@ -80,5 +85,6 @@
 | senzing_core | `SzAbstractFactoryCore` | `SzAbstractFactory`  |
 | senzing_grpc | `SzAbstractFactoryGrpc` | `SzAbstractFactory`  |
 
+1. Currently not testable.
 1. This style falls apart when a `from senzing import SzAbstractFactory` is in the code.
 1. Can't use this style in "both" mode.
