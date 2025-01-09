@@ -4,4 +4,4 @@
 
 1. [AbstractFactory naming]
 
-[AbstractFactory naming]: abstract-factory-naming
+[AbstractFactory naming]: abstract-factory-naming/README.md
