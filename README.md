@@ -34,3 +34,35 @@
     ```console
     docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
     ```
+
+## Styles
+
+### Style 1
+
+|--------------|---------------------|--|
+| senzing      | `SzAbstractFactory` |  |
+| senzing_core | `SzAbstractFactory` |  |
+| senzing_grpc | `SzAbstractFactory` |  |
+
+1. This style falls apart when a `from senzing import SzAbstractFactory` is in the code.
+
+### Style 2
+
+|--------------|---------------------|--------------------------|
+| senzing      | `SzAbstractFactory` |                          |
+| senzing_core | `SzAbstractFactory` | as SzAbstractFactoryCore |
+| senzing_grpc | `SzAbstractFactory` | as SzAbstractFactoryGrpc |
+
+### Style 3
+
+|--------------|-------------------------|--|
+| senzing      | `SzAbstractFactory`     |  |
+| senzing_core | `SzAbstractFactoryCore` |  |
+| senzing_grpc | `SzAbstractFactoryGrpc` |  |
+
+### Style 4
+
+|--------------|-------------------------|----------------------|
+| senzing      | `SzAbstractFactory`     |                      |
+| senzing_core | `SzAbstractFactoryCore` | as SzAbstractFactory |
+| senzing_grpc | `SzAbstractFactoryGrpc` | as SzAbstractFactory |
