@@ -2,11 +2,11 @@
 
 import grpc
 from independent_module import print_version
-from senzing_grpc import SzAbstractFactoryGrpc, SzAbstractFactoryParametersGrpc
+from senzing_grpc import SzAbstractFactory, SzAbstractFactoryParameters
 
-FACTORY_PARAMETERS: SzAbstractFactoryParametersGrpc = {
+FACTORY_PARAMETERS: SzAbstractFactoryParameters = {
     "grpc_channel": grpc.insecure_channel("localhost:8261"),
 }
 
-sz_abstract_factory = SzAbstractFactoryGrpc(**FACTORY_PARAMETERS)
+sz_abstract_factory = SzAbstractFactory(**FACTORY_PARAMETERS)
 print_version(sz_abstract_factory)
