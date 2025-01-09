@@ -88,3 +88,7 @@
 1. Currently not testable.
 1. This style falls apart when a `from senzing import SzAbstractFactory` is in the code.
 1. Can't use this style in "both" mode.
+
+## Conclusions
+
+1. ????
