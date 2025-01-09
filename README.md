@@ -28,3 +28,9 @@
     ```console
     python3 -m pip install senzing-grpc senzing-core mypy
     ```
+
+1. Start Senzing gRPC service.
+
+    ```console
+    docker run -it --name senzing-serve-grpc -p 8261:8261 --read-only --rm senzing/serve-grpc:latest
+    ```
