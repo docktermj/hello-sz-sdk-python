@@ -39,10 +39,11 @@
 
 ### Style 1
 
-| ------------ | ------------------- | - |
-| senzing      | `SzAbstractFactory` |   |
-| senzing_core | `SzAbstractFactory` |   |
-| senzing_grpc | `SzAbstractFactory` |   |
+| package      | Variable            | AS |
+| ------------ | ------------------- | -- |
+| senzing      | `SzAbstractFactory` |    |
+| senzing_core | `SzAbstractFactory` |    |
+| senzing_grpc | `SzAbstractFactory` |    |
 
 1. This style falls apart when a `from senzing import SzAbstractFactory` is in the code.
 
