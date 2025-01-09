@@ -49,21 +49,24 @@
 
 ### Style 2
 
+| package      | Variable            | AS                       |
 |--------------|---------------------|--------------------------|
 | senzing      | `SzAbstractFactory` |                          |
-| senzing_core | `SzAbstractFactory` | as SzAbstractFactoryCore |
-| senzing_grpc | `SzAbstractFactory` | as SzAbstractFactoryGrpc |
+| senzing_core | `SzAbstractFactory` | `SzAbstractFactoryCore`  |
+| senzing_grpc | `SzAbstractFactory` | `SzAbstractFactoryGrpc`  |
 
 ### Style 3
 
-|--------------|-------------------------|--|
-| senzing      | `SzAbstractFactory`     |  |
-| senzing_core | `SzAbstractFactoryCore` |  |
-| senzing_grpc | `SzAbstractFactoryGrpc` |  |
+| package      | Variable                | AS |
+|--------------|-------------------------|----|
+| senzing      | `SzAbstractFactory`     |    |
+| senzing_core | `SzAbstractFactoryCore` |    |
+| senzing_grpc | `SzAbstractFactoryGrpc` |    |
 
 ### Style 4
 
+| package      | Variable                | AS                   |
 |--------------|-------------------------|----------------------|
 | senzing      | `SzAbstractFactory`     |                      |
-| senzing_core | `SzAbstractFactoryCore` | as SzAbstractFactory |
-| senzing_grpc | `SzAbstractFactoryGrpc` | as SzAbstractFactory |
+| senzing_core | `SzAbstractFactoryCore` | `SzAbstractFactory`  |
+| senzing_grpc | `SzAbstractFactoryGrpc` | `SzAbstractFactory`  |
