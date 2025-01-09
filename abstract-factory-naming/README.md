@@ -54,6 +54,7 @@
 
 1. This style falls apart when a `from senzing import SzAbstractFactory` is in the code.
 1. Can't use this style in "both" mode.
+1. In "duo" mode, drives `pylance` crazy.
 
 ### Style 2
 
